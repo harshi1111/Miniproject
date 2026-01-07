@@ -29,8 +29,31 @@ LegalEase AI is a full-stack web application designed to streamline preliminary 
 
 ## System Architecture
 <!--Embed the system architecture diagram as shown below-->
-![LegalEase AI System Architecture](https://github.com/yourusername/LegalEase-AI/assets/yourassetid/system-architecture.png)
-
+```
+┌─────────────────────────────────────┐
+│     Frontend (Web UI)                │
+│  Upload Docs | Ask Questions         │
+└────────────────┬────────────────────┘
+                 │
+┌────────────────v────────────────────┐
+│   API Server (Flask/FastAPI)         │
+│   /analyze-document, /legal-query    │
+└────────────────┬────────────────────┘
+                 │
+┌────────────────v────────────────────┐
+│  NLP Processing Layer                │
+│  ├─ Text Preprocessing               │
+│  ├─ BERT Model (Fine-tuned)         │
+│  └─ Information Extraction           │
+└────────────────┬────────────────────┘
+                 │
+┌────────────────v────────────────────┐
+│  Knowledge Layer                     │
+│  ├─ 50,000+ Case Laws               │
+│  ├─ 200+ Indian Statutes            │
+│  └─ Risk Assessment Models          │
+└─────────────────────────────────────┘
+```
 ## Output
 
 #### Output consists of Risk Dashboard & Entity Extraction, Document Q&A with Evidence Retrieval, Tamil Audio Summary Player
